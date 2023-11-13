@@ -7,7 +7,7 @@ int main() {
     
     int N;
 
-    int input[1001] = {0,};
+    int input[2001] = {0,};
 
     cin >> N;
 
