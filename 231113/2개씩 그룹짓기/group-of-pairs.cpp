@@ -17,21 +17,18 @@ int main() {
 
     sort(input, input+(N*2));
 
-    int cnt = 0;
+    int sum = 0;
 
-    int sum_a = 0, sum_b = 0;
+    int st = 0, en = (N*2) - 1;
 
-    for(int i = 0; i < N; i++){
-        sum_a += input[cnt++];
-        sum_b += input[cnt++];
+    while(st < en){
+        int temp = input[st++] + input[en--];
+        if(sum < temp){
+            sum = temp;
+        }
     }
 
-    if(sum_a <= sum_b){
-        cout << sum_b;
-    }
-    else{
-        cout << sum_a;
-    }
+    cout << sum;
 
     return 0;
 }
