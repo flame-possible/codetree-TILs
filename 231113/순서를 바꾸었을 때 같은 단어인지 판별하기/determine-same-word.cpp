@@ -17,10 +17,12 @@ int main() {
 
     if(a_len != b_len){
         cout << "No";
+        return 0;
     }
     else{
         if(a != b){
             cout << "No";
+            return 0;
         }
     }
 
