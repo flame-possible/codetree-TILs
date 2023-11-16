@@ -11,7 +11,7 @@ int main() {
 
     for(int i = 1; i <= n; i++){
         cin >> input[i];
-        sort(input+1, input+i);
+        sort(input+1, input+i+1);
 
         if(i&1){
             cout << input[(i/2) + 1] << ' ';
