@@ -32,14 +32,16 @@ int main() {
 
     cout << "name\n";
     for(int i = 0; i < n; i++){
-        cout << info[i].name << ' ' << info[i].height << ' ' << info[i].weight << '\n';
+        printf("%s %d %.1lf\n", info[i].name.c_str(), info[i].height, info[i].weight);
+        // cout << info[i].name << ' ' << info[i].height << ' ' << (double)info[i].weight << '\n';
     }
 
     sort(info, info+n, cmp_height);
 
     cout << "\nheight\n";
     for(int i = 0; i < n; i++){
-        cout << info[i].name << ' ' << info[i].height << ' ' << info[i].weight << '\n';
+        printf("%s %d %.1lf\n", info[i].name.c_str(), info[i].height, info[i].weight);
+        // cout << info[i].name << ' ' << info[i].height << ' ' << (double)info[i].weight << '\n';
     }
 
     return 0;
