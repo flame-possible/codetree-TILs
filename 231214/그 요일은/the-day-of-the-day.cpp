@@ -28,7 +28,7 @@ int main() {
     int stan = count_mon(m1, d1);
     int tar = count_mon(m2, d2);
 
-    int diff = count_mon(m1, d1) - count_mon(m2, d2);
+    int diff = count_mon(m2, d2) - count_mon(m1, d1);
     int cnt = 0;
     int pos = 0;
 
@@ -39,16 +39,12 @@ int main() {
         }
     }
 
-    while(diff < 0){
-        diff += 7;
-        cnt++;
-    }
+    cnt = diff / 7;
+    diff %= 7;
 
     if(pos <= diff){
         cnt++;
     }
-
-    cnt--;
 
     cout << cnt << '\n';
 
