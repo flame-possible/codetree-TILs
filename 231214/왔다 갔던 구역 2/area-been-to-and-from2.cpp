@@ -23,7 +23,8 @@ int main() {
             }
         }
         else{
-            for(int k = x; k >= 0; k--){
+            input[cur]++;
+            for(int k = x; k > 0; k--){
                 input[cur--]++;
             }
         }
