@@ -34,12 +34,12 @@ int main() {
     int result = 0;
 
     for(int i = 0; i <= 2000; i++){
-        if(input[i] >= 2){
+        // if(input[i] >= 2){
+        //     result++;
+        //     // cout << i << ' ' << input[i] << ' ' << result << '\n';
+        // }
+        if(i > 1 && input[i-2] >= 2 && input[i-1] >= 2 && input[i] < 2){
             result++;
-            // cout << i << ' ' << input[i] << ' ' << result << '\n';
-        }
-        if(i > 0 && input[i-1] >= 2 && input[i] < 2){
-            result--;
             // cout << i << ' ' << input[i] << ' ' << result << '\n';
         }
     }
