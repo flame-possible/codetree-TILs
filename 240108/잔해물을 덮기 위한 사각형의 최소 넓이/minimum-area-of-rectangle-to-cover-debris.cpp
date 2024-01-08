@@ -33,21 +33,25 @@ int main() {
     for(int i = 0; i < 2001; i++){
         for(int k = 0; k < 2001; k++){
             if(input[i][k]){
+                // cout << i << ' ' << k << '\n';
                 if(x1 > i){
                     x1 = i;
                 }
                 if(x2 < i){
-                    x2 = i + 1;
+                    x2 = i;
                 }
                 if(y1 > k){
                     y1 = k;
                 }
                 if(y2 < k){
-                    y2 = k + 1;
+                    y2 = k;
                 }
             }
         }
     }
+
+    x2++;
+    y2++;
 
     // cout << x1 << ' ' << y1 << ' ' << x2 << ' ' << y2 << '\n';
 
