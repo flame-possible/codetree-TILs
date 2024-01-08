@@ -29,10 +29,12 @@ int main() {
     x1 = y1 = 2001;
     x2 = y2 = 0;
 
+    int pan = 0;
     int result = 0;
     for(int i = 0; i < 2001; i++){
         for(int k = 0; k < 2001; k++){
             if(input[i][k]){
+                pan = 1;
                 // cout << i << ' ' << k << '\n';
                 if(x1 > i){
                     x1 = i;
@@ -55,7 +57,12 @@ int main() {
 
     // cout << x1 << ' ' << y1 << ' ' << x2 << ' ' << y2 << '\n';
 
-    result = (x2 - x1) * (y2 - y1);
+    if(pan == 1){
+        result = (x2 - x1) * (y2 - y1);
+    }
+    else{
+        result = 0;
+    }
 
     cout << result << '\n';
 
