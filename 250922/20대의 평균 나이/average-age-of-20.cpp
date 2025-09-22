@@ -15,7 +15,7 @@ int main() {
         sum += temp;
         cnt++;
 
-        if(temp >= 30){
+        if(temp >= 30 || temp < 20){
             sum -= temp;
             cnt--;
             break;
