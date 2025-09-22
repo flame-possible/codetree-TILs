@@ -8,7 +8,7 @@ int main() {
 
     cin >> a >> b;
 
-    if(a < 0){
+    if(a <= 0){
         cout << "0";
     }
     else{
