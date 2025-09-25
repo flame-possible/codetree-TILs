@@ -9,11 +9,11 @@ int main() {
     cin >> a >> b;
 
     for(int i = 1; i <= 9; i++){
-        for(int k = b; k >= 2; k--){
+        for(int k = b; k >= a; k--){
             if(k % 2 == 0){
                 cout << k << " * " << i << " = " << k * i;
                 
-                if(k > 2){
+                if(k > a){
                     cout << " / ";
                 }
             }
