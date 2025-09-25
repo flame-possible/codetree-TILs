@@ -10,7 +10,7 @@ int main() {
 
     int output[10] = {0,};
 
-    while(a >= 1){
+    while(a > 1){
         output[a % b]++;
 
         a /= b;
@@ -19,6 +19,7 @@ int main() {
     int result = 0;
 
     for(int i = 0; i < 10; i++){
+        // cout << output[i] << '\n';
         result += output[i] * output[i];
     }
 
