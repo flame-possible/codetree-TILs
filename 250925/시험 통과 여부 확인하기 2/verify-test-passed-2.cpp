@@ -15,7 +15,7 @@ int main() {
     for(int i = 0; i < n; i++){
         int result = 0;
 
-        for(int k = 0; k < n; k++){
+        for(int k = 0; k < 4; k++){
             cin >> input[k];
 
             result += input[k];
