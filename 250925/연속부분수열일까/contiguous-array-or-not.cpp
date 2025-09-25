@@ -19,7 +19,7 @@ int main() {
         cin >> arr2[i];
     }
 
-    for(int i = 0; i < a - b; i++){
+    for(int i = 0; i <= a - b; i++){
 
         int result = 1;
 
