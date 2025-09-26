@@ -17,18 +17,20 @@ int main() {
     }
 
     while(cnt != 0){
+        int max_idx = cnt;
 
-        for(int i = 1; i <= cnt; i++){
+        for(int i = 1; i <= max_idx; i++){
             if(a[i] > max){
                 max = a[i];
-            }
-        }
-
-        for(int i = 1; i <= cnt; i++){
-            if(a[i] == max){
                 cnt = i;
             }
         }
+
+        // for(int i = 1; i <= cnt; i++){
+        //     if(a[i] == max){
+        //         cnt = i;
+        //     }
+        // }
 
         cout << cnt-- << ' ';
 
