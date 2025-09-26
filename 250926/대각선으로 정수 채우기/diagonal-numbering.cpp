@@ -26,12 +26,9 @@ int main() {
             curx--;
             cury++;
         }
-
-        if(cury == n - 1 && curx == m - 1){
-            input[cury][curx] = cnt;
-            break;
-        }
     }
+    
+    input[cury][curx] = cnt;
 
     for(int i = 0; i < n; i++){
         for(int k = 0; k < m; k++){
