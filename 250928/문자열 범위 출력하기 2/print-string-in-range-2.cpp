@@ -13,8 +13,13 @@ int main() {
 
     cin >> cnt;
 
-    for(int i = input.length() - 1; i >= input.length() - cnt; i--){
-        cout << input[i];
+    if(cnt > input.length()){
+        cout << input;
+    }
+    else{
+        for(int i = input.length() - 1; i >= input.length() - cnt; i--){
+            cout << input[i];
+        }
     }
 
     return 0;
