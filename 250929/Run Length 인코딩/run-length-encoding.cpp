@@ -35,6 +35,12 @@ int main() {
             // cout << tar << cnt;
             tar = A[i];
             cnt = 1;
+
+            if(i == A.length() - 1){
+                result_char[result_cnt] = tar;
+                result_int[result_cnt++] = cnt;
+                // cout << tar << cnt;
+            }
         }
     }
 
