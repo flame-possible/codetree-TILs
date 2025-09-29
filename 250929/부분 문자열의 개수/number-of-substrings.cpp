@@ -1,25 +1,21 @@
 #include <iostream>
+#include <string>
 using namespace std;
-
-string a;
-string b;
 
 int main() {
     // Please write your code here.
 
+    string a, b;
 
-    getline(cin, a);
-    cout << a << '\n';
-    getline(cin, b);
-    cout << b << '\n';
+    cin >> a >> b;
 
     int cnt = 0;
     int result = 0;
 
 
     while(1){
-        if(a.find(b) != string::npos){
-            cnt = a.find(b) + 1;
+        if(a.find(b, cnt) != string::npos){
+            cnt = a.find(b, cnt) + 1;
             result++;
         }
         else{
@@ -31,3 +27,27 @@ int main() {
 
     return 0;
 }
+
+// #include <iostream>
+// #include <string>
+
+// using namespace std;
+
+// string input_str;
+// string target_str;
+
+// int main() {
+//     cin >> input_str;
+//     cin >> target_str;
+
+//     // Please write your code here.
+
+//     if(input_str.find(target_str) != string::npos){
+//         cout << input_str.find(target_str);
+//     }
+//     else{
+//         cout << "-1";
+//     }
+
+//     return 0;
+// }
