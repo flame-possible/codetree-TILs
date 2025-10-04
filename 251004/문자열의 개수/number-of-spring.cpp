@@ -18,7 +18,7 @@ int main() {
 
     cout << cnt - 1 << '\n';
 
-    for(int i = 0; i < cnt; i++){
+    for(int i = 0; i < cnt - 1; i++){
         if(i % 2 == 0)
             cout << input[i] << '\n';
     }
