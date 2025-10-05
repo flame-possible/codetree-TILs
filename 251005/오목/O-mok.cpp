@@ -22,17 +22,44 @@ int row(int y, int k){
 int dia(int y, int k){
     
     int stone_color = input[y][k];
+
+    int result = 1;
     
     for(int i = 1; i < 5; i++){
         if(input[y + i][k + i] != stone_color){
-            return 0;
+            result = 0;
+            break;
         }
     }
-    
-    cout << input[y][k] << '\n';
-    cout << y + 2 << ' ' << k + 2 << '\n';
 
-    return 1;
+    if(result == 1){
+        
+        cout << input[y][k] << '\n';
+        cout << y + 2 << ' ' << k + 2 << '\n';
+
+    }
+    else{
+
+        result = 1;
+    
+        for(int i = 1; i < 5; i++){
+            if(((y + i) > 0 && (k - i) > 0) && input[y + i][k - i] != stone_color){
+                result = 0;
+                break;
+            }
+        }
+
+        if(result == 1){
+        
+            cout << input[y][k] << '\n';
+            cout << y + 2 << ' ' << k - 2 << '\n';
+
+        }
+
+    }
+    
+
+    return result;
 }
 
 int col(int y, int k){
