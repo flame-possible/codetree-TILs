@@ -13,7 +13,7 @@ int main() {
 
     int result = 0;
 
-    for(int i = 0; i < n - k; i++){
+    for(int i = 0; i <= n - k; i++){
         int temp = 0;
         for(int p = 0; p < k; p++){
             temp += arr[i + p];
