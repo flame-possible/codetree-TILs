@@ -23,7 +23,7 @@ int main() {
 
     int result = 0;
 
-    for(int i = 0; i <= max_cnt - K; i++){
+    for(int i = 0; i <= 401 - (2 * K); i++){
         int temp = 0;
         for(int k = i; k < i + (2 * K) + 1; k++){
             temp += pan[k];
