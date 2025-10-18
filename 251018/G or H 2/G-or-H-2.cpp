@@ -41,7 +41,7 @@ int main() {
                 }
             }
 
-            if(h == g && pan[k] != 0 && pan[k + i - 1] != 0){
+            if(((h != 0 && g == 0) || (h == 0 && g != 0) || (h == g)) && (pan[k] != 0 && pan[k + i - 1] != 0)){
                 result = i - 1;
                 break;
             }
