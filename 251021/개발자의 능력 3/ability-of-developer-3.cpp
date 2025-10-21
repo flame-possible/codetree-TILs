@@ -16,8 +16,8 @@ int main() {
     int result = sum;
 
     for(int i = 0; i < 4; i++){
-        for(int k = i; k < 5; k++){
-            for(int p = k; p < 6; p++){
+        for(int k = i + 1; k < 5; k++){
+            for(int p = k + 1; p < 6; p++){
                 if(result > abs(sum - (input[i] + input[k] + input[p]) - (input[i] + input[k] + input[p]))){
                     result = abs(sum - (input[i] + input[k] + input[p]) - (input[i] + input[k] + input[p]));
                 }
