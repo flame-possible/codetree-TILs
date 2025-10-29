@@ -35,7 +35,7 @@ int main() {
         for(int k = 1; k < t; k++){
             for(int p = 0; p < input[k].info.size(); p++){
                 if(input[k].info[p].first == m){
-                    m_info[m] = 1;
+                    m_info[input[k].info[p].second] = 1;
                 }
             }
         }
