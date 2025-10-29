@@ -27,24 +27,35 @@ int main() {
         input[t].info.push_back({p, m});
     }
 
+    int infectCheese = 0;
+
     for(int i = 0; i < S; i++){
         int m, t;
 
         cin >> m >> t;
 
+        int temp_m[M+1] = {0,};
+
         for(int k = 1; k < t; k++){
             for(int p = 0; p < input[k].info.size(); p++){
                 if(input[k].info[p].first == m){
-                    m_info[input[k].info[p].second] = 1;
+                    temp_m[input[k].info[p].second] = 1;
                 }
             }
         }
+
+        for(int k = 1; k <= M; k++){
+            m_info[k] += temp_m[k];
+
+            infectCheese = max(infectCheese, m_info[k]);
+        }
+
     }
 
     int result = 0;
 
     for(int i = 1; i <= M; i++){
-        if(m_info[i]){
+        if(m_info[i] == infectCheese){
             for(int k = 1; k <= 100; k++){
                 for(int p = 0; p < input[k].info.size(); p++){
                     if(input[k].info[p].second == i){
