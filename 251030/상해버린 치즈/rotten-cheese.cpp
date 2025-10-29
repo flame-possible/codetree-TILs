@@ -66,15 +66,16 @@ int main() {
                     }
                 }
             }
+            
+
+            int temp_result = 0;
+
+            for(int k = 1; k <= N; k++){
+                temp_result += temp_p[k];
+            }
+
+            result = max(result, temp_result);
         }
-
-        int temp_result = 0;
-
-        for(int k = 1; k <= N; k++){
-            temp_result += temp_p[k];
-        }
-
-        result = max(result, temp_result);
     }
 
     cout << result;
