@@ -30,6 +30,10 @@ int main() {
 
         int change = max(temp[0], 0);
 
+        if(change > 0){
+            tempcnt++;
+        }
+
         for(int k = 1; k < N; k++){
 
             if(change == 0){
@@ -44,10 +48,6 @@ int main() {
                 }
             }
 
-        }
-
-        if(change > 0){
-            tempcnt++;
         }
 
         result = max(result, tempcnt);
