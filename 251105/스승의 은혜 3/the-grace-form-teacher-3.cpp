@@ -1,9 +1,15 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 struct Present{
 
     int p, s;
+    int sum;
+
+    bool operator<(const Present& Present1) const{
+        return sum < Present1.sum;
+    }
 
 };
 
@@ -19,7 +25,11 @@ int main() {
 
         cin >> presents[i].p >> presents[i].s;
 
+        presents[i].sum = presents[i].p + presents[i].s;
+
     }
+
+    sort(presents, presents + N);
 
     int result = 0;
 
