@@ -21,7 +21,7 @@ int main() {
 
     int result = 0;
 
-    for(int i = TMin; i <= TMax; i++){
+    for(int i = TMin - 1; i <= TMax + 1; i++){
         int temp = 0;
 
         for(int k = 0; k < N; k++){
