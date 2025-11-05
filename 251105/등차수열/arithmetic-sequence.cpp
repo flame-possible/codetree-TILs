@@ -30,16 +30,10 @@ int main() {
 
     int result = 0;
 
-    if(input[0] > input[1]){
-        for(int k = input[0] + 1; k > input[N-1]; k--){
-            result = max(result, answer(k));
-        }
+    for(int k = 1; k < 100; k++){
+        result = max(result, answer(k));
     }
-    else{
-        for(int k = input[0] + 1; k < input[N-1]; k++){
-            result = max(result, answer(k));
-        }
-    }
+
 
     cout << result;
 
