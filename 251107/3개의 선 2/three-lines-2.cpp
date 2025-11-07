@@ -109,7 +109,7 @@ int main() {
 
     int result = 0;
 
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i <= 3; i++){
         
         result = line(0, 0);
 
@@ -118,7 +118,9 @@ int main() {
         x_cnt++;
         y_cnt--;
 
+
     }
+
 
     cout << result;
 
