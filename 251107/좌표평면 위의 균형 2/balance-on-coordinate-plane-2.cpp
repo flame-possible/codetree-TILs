@@ -16,15 +16,12 @@ int main() {
     }
 
     int result = INT_MAX;
-    int cnt[5] = {0,};
 
     for(int i = 2; i < 100; i += 2){
 
         for(int k = 2; k < 100; k += 2){
 
-            for(int k = 0; k < 5; k++){
-                cnt[k] = 0;
-            }
+            int cnt[5] = {0,};
             
             for(int p = 0; p < N; p++){
                 if(input[p][0] < i){
