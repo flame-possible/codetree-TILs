@@ -16,12 +16,12 @@ int main() {
 
         int temp = 0;
 
-        for(int k = 0; k <= N - (i * 2); k++){
+        for(int k = 0; k <= N - i; k++){
             string dns = input.substr(k, i);
 
             temp = 0;
 
-            for(int p = k + i; p <= N - i; p++){
+            for(int p = k + 1; p <= N - i; p++){
                 string tar = input.substr(p, i);
 
                 if(dns == tar){
