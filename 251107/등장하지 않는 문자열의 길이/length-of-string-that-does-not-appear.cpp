@@ -13,11 +13,6 @@ int main() {
     cin >> input;
 
     for(int i = 1; i <= N; i++){
-        
-        if(i > N - i){
-            cout << i;
-            break;
-        }
 
         int temp = 0;
 
