@@ -12,7 +12,7 @@ int answer(int cnt){
 
     check[cnt] = 1;
 
-    for(int i = 1; i <= K; i++){
+    for(int i = 1; i <= K && cnt + i < N; i++){
         if(input[cnt] == input[cnt + i] && !check[cnt + i]){
             check[cnt + i] = 1;
             ans++;
@@ -47,7 +47,13 @@ int main() {
 
     for(int i = 0; i <= 1000000; i++){
         maxCnt = max(maxCnt, result[i]);
+        // if(maxCnt == 124){
+        //     cout << i << '\n';
+        // }
     }
+
+    // cout << result[0] << '\n';
+    // cout << maxCnt << '\n';
 
     if(!maxCnt){
         cout << "0";
