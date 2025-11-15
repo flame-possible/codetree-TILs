@@ -8,18 +8,23 @@ int result[1000001];
 
 int answer(int cnt){
 
-    int result = 1;
+    int ans = 0;
 
     check[cnt] = 1;
 
     for(int i = 1; i <= 3; i++){
         if(input[cnt] == input[cnt + i] && !check[cnt + i]){
             check[cnt + i] = 1;
-            result += answer(cnt + i);
+            ans++;
+            ans += answer(cnt + i);
         }
     }
 
-    return result;
+    if(ans > 0){
+        return ans + 1;
+    }
+
+    return 0;
 
 }
 
@@ -44,7 +49,13 @@ int main() {
         maxCnt = max(maxCnt, result[i]);
     }
 
+    if(!maxCnt){
+        cout << "0";
+        return 0;
+    }
+
     for(int i = 1000000; i >= 0; i--){
+
         if(maxCnt == result[i]){
             cout << i;
             break;
