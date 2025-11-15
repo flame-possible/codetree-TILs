@@ -12,7 +12,7 @@ int answer(int cnt){
 
     check[cnt] = 1;
 
-    for(int i = 1; i <= 3; i++){
+    for(int i = 1; i <= K; i++){
         if(input[cnt] == input[cnt + i] && !check[cnt + i]){
             check[cnt + i] = 1;
             ans++;
