@@ -35,10 +35,7 @@ int main() {
             temp += input[p] * (p - k) * (p - k);
         }
 
-        if(temp){
-            // cout << temp << '\n';
-            result = min(result, temp);
-        }
+        result = min(result, temp);
 
         
     }
