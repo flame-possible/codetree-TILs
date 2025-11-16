@@ -28,14 +28,14 @@ void answer(int cur, int cnt){
             for(int k = l; k < r; k++){
                 temp[i] += input[k];
             }
-            cout << temp[i] << ' ';
+            // cout << temp[i] << ' ';
 
             temp_result = max(temp_result, temp[i]);
 
             l = r;
         }
 
-        cout << '\n';
+        // cout << '\n';
 
         result = min(result, temp_result);
 
