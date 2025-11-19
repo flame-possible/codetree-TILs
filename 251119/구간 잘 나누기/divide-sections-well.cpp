@@ -5,10 +5,6 @@ using namespace std;
 int N, M;
 int input[101];
 
-int wall[101];
-int result = 5000;
-
-
 int main() {
     // Please write your code here.
 
