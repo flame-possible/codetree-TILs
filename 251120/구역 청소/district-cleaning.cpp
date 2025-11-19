@@ -8,30 +8,28 @@ int main() {
 
     cin >> a >> b >> c >> d;
 
-    int ans = 1;
-
-    if((b < c) || (d < a)){
-        ans = 2;
-    }
+    int ans = 2;
 
     int input[101] = {0,};
 
     for(int i = a; i <= b; i++){
-        if(!input[i]){
-            input[i]++;
-        }
+        input[i]++;
     }
     
     for(int i = c; i <= d; i++){
-        if(!input[i]){
-            input[i]++;
+        input[i]++;
+        
+        if(input[i] >= 2){
+            ans = 1;
         }
     }
 
     int result = 0;
 
     for(int i = 0; i <= 100; i++){
-        result += input[i];
+        if(input[i]){
+            result++;
+        }
     }
 
     cout << result - ans;
