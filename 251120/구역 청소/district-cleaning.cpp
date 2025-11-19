@@ -8,6 +8,12 @@ int main() {
 
     cin >> a >> b >> c >> d;
 
+    int ans = 1;
+
+    if((b < c) || (d < a)){
+        ans = 2;
+    }
+
     int input[101] = {0,};
 
     for(int i = a; i <= b; i++){
@@ -28,7 +34,7 @@ int main() {
         result += input[i];
     }
 
-    cout << result-1;
+    cout << result - ans;
 
     return 0;
 }
