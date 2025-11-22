@@ -9,6 +9,8 @@ int main() {
     cin >> N >> M >> p;
 
     int input[26];
+    int person[M+1];
+    int read[M+1];
 
     for(int i = 0; i < 26; i++){
         input[i] = -1;
@@ -19,6 +21,8 @@ int main() {
         int b;
 
         cin >> a >> b;
+        person[i] = a-'A';
+        read[i] = b;
 
         input[a-'A'] = i;
 
@@ -26,6 +30,9 @@ int main() {
             for(int k = 0; k < N; k++){
                 input[k] = i;
             }
+        }
+        else if(read[i-1] == read[i]){
+            input[person[i-1]] = i;
         }
     }
 
