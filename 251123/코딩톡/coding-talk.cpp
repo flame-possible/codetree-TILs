@@ -34,10 +34,6 @@ int main() {
                 input[k][1] = b;
             }
         }
-        else if(read[i-1] == read[i]){
-            input[person[i-1]][0] = i;
-            input[person[i-1]][1] = b;
-        }
 
         for(int k = 0; k < N; k++){
             if(input[k][1] == b){
