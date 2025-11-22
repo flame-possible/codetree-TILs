@@ -8,12 +8,13 @@ int main() {
 
     cin >> N >> M >> p;
 
-    int input[26];
+    int input[26][2];
     int person[M+1];
     int read[M+1];
 
     for(int i = 0; i < 26; i++){
-        input[i] = -1;
+        input[i][0] = -1;
+        input[i][1] = -1;
     }
 
     for(int i = 1; i <= M; i++){
@@ -24,22 +25,39 @@ int main() {
         person[i] = a-'A';
         read[i] = b;
 
-        input[a-'A'] = i;
+        input[a-'A'][0] = i;
+        input[a-'A'][1] = b;
 
         if(b == 0){
             for(int k = 0; k < N; k++){
-                input[k] = i;
+                input[k][0] = i;
+                input[k][1] = b;
             }
         }
         else if(read[i-1] == read[i]){
-            input[person[i-1]] = i;
+            input[person[i-1]][0] = i;
+            input[person[i-1]][1] = b;
+        }
+
+        for(int k = 0; k < N; k++){
+            if(input[k][1] == b){
+                input[k][0] = i;
+            }
         }
     }
 
     char result = 'A';
+    
+    // for(int i = 0; i < N; i++){
+    //     result += i;
+    //     cout << result << ' ' << input[i][0] << '\n';
+        
+
+    //     result = 'A';
+    // }
 
     for(int i = 0; i < N; i++){
-        if(input[i] < p){
+        if(input[i][0] < p){
             result += i;
             cout << result << ' ';
         }
