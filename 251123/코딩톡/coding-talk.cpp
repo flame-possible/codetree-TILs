@@ -21,6 +21,12 @@ int main() {
         cin >> a >> b;
 
         input[a-'A'] = i;
+
+        if(b == 0){
+            for(int k = 0; k < N; k++){
+                input[k] = i;
+            }
+        }
     }
 
     char result = 'A';
