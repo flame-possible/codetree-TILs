@@ -36,7 +36,7 @@ int main() {
 
     for(int k = 1; k < cnt; k++){
         if(dis[k] == maxDis){
-            input[place_1[k] - place_1[k-1]] = '1';
+            input[place_1[k] - (dis[k] / 2) - 1] = '1';
 
             int temp_result = 1000;
             temp = 0;
@@ -53,11 +53,11 @@ int main() {
 
             result = max(result, temp_result);
             
-            input[place_1[k] - place_1[k-1]] = '0';
+            input[place_1[k] - (dis[k] / 2) - 1] = '0';
         }
     }
 
-    cout << result;
+    cout << result + 1;
 
     return 0;
 }
