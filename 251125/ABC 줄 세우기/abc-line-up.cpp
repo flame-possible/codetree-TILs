@@ -4,16 +4,6 @@ using namespace std;
 int N;
 char input[26];
 
-int answer(){
-
-    for(int i = 0; i < N; i++){
-        if(input[i] != 'A' + i) return 1;
-    }
-
-    return 0;
-
-}
-
 int main() {
     // Please write your code here.
 
