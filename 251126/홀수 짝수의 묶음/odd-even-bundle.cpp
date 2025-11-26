@@ -23,21 +23,17 @@ int main() {
             even++;
         }
     }
-
-    int result[N][2] = {0,};
+    
     int cnt = 0;
 
     while(1){
 
         if(cnt & 1){
             if(odd >= 1){
-                result[cnt++][1] = 1;
                 odd -= 1;
             }
             else if(odd >= 1 && even >= 1){
-                result[cnt][0] = 1;
                 even -= 1;
-                result[cnt++][1] = 1;
                 odd -= 1;
             }
             else{
@@ -47,11 +43,9 @@ int main() {
         }
         else{
             if(even >= 1){
-                result[cnt++][0] = 1;
                 even -= 1;
             }
             else if(odd >= 2){
-                result[cnt++][1] = 2;
                 odd -= 2;
             }
             else{
@@ -62,6 +56,8 @@ int main() {
             }
 
         }
+
+        cnt++;
 
     }
     
