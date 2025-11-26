@@ -3,6 +3,7 @@ using namespace std;
 
 int N;
 int input[101];
+int answer;
 
 void ans(int cnt){
     int temp[101] = {0,};
@@ -18,6 +19,7 @@ void ans(int cnt){
     }
 
     input[cnt] = target;
+    answer++;
 }
 
 int main() {
@@ -56,7 +58,7 @@ int main() {
         }
 
         if(result){
-            cout << i;
+            cout << answer;
             break;
         }
     }
