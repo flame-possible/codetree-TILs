@@ -21,7 +21,9 @@ int main() {
     for(int i = 0; i < N; i++){
         if(!checked[i] && input[i]){
             result++;
-            for(int k = i; k <= i + M + M; k++){
+            int ceil = max(N-1, i + M + M);
+
+            for(int k = i; k <= ceil; k++){
                 checked[k] = 1;
             }
         }
