@@ -32,10 +32,6 @@ int main() {
             if(odd >= 1){
                 odd -= 1;
             }
-            else if(odd >= 1 && even >= 1){
-                even -= 1;
-                odd -= 1;
-            }
             else{
                 break;
             }
