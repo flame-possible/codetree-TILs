@@ -48,6 +48,10 @@ int main() {
             if(it != input.end()){
                 input.insert(it, b);
             }
+            else{
+                input.push_back(b);
+                it = input.end();
+            }
         }
 
         // for(list<char>::iterator temp = input.begin(); temp != input.end(); temp++){
