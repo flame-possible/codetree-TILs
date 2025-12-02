@@ -44,14 +44,8 @@ int main() {
         }
         else{
             cin >> b;
-
-            if(it != input.end()){
-                input.insert(it, b);
-            }
-            else{
-                input.push_back(b);
-                it = input.end();
-            }
+            
+            input.insert(it, b);
         }
 
         // for(list<char>::iterator temp = input.begin(); temp != input.end(); temp++){
