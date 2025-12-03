@@ -14,10 +14,10 @@ int main() {
         cin >> input[i];
     }
 
-    for(int i = 0; i < N; i++){
+    for(int i = 0; i < N-1; i++){
         int min = i;
 
-        for(int k = i; k < N; k++){
+        for(int k = i+1; k < N; k++){
             if(input[k] < input[min]){
                 min = k;
             }
