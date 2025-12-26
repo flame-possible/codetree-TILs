@@ -16,6 +16,10 @@ int main() {
             s.push('(');
         }
         else{
+            if(s.empty()){
+                cout << "No" << '\n';
+                return 0;
+            }
             if(s.top() == '('){
                 s.pop();
             }
