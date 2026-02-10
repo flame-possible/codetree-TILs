@@ -28,6 +28,7 @@ int main() {
                 cnt++;
             }
             else{
+                cur = input[i][k];
                 cnt = 1;
             }
 
@@ -48,6 +49,7 @@ int main() {
                 cnt++;
             }
             else{
+                cur = input[k][i];
                 cnt = 1;
             }
 
