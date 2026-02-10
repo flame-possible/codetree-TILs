@@ -37,8 +37,8 @@ int main() {
         }
     }
 
-    for(int i = 0; i < N; i++){
-        for(int k = 0; k < M - 2; k++){
+    for(int i = 0; i < M; i++){
+        for(int k = 0; k < N - 2; k++){
             result = max(result, input[k][i] + input[k+1][i] + input[k+2][i]);
         }
     }
