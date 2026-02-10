@@ -20,9 +20,9 @@ int main() {
 
     for(int i = 0; i < N; i++){
         int cur = input[i][0];
-        int cnt = 1;
+        int cnt = 0;
 
-        for(int k = 1; k < N; k++){
+        for(int k = 0; k < N; k++){
             
             if(cur == input[i][k]){
                 cnt++;
@@ -40,9 +40,9 @@ int main() {
 
     for(int i = 0; i < N; i++){
         int cur = input[0][i];
-        int cnt = 1;
+        int cnt = 0;
 
-        for(int k = 1; k < N; k++){
+        for(int k = 0; k < N; k++){
             
             if(cur == input[k][i]){
                 cnt++;
