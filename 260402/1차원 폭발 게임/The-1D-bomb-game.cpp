@@ -50,6 +50,7 @@ int answer(){
         result = 1;
     }
     // Print(temp);
+    // cout << result << '\n';
 
 
     arr.clear();
@@ -72,7 +73,7 @@ int main() {
         arr.push_back(input);
     }
 
-    while(answer()){
+    while(answer() && arr.size() > 0){
 
     }
 
